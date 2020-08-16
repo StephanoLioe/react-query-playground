@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-query'
+import { ReactQueryDevtools } from 'react-query-devtools'
 import './App.css';
 
 interface IUser {
@@ -23,6 +24,8 @@ function App() {
   console.log(data, status)
 
   return (
+    <>
+    <ReactQueryDevtools initialIsOpen />
     <div className="App">
       <h1>Users</h1>
 
@@ -42,6 +45,7 @@ function App() {
         </div>
       )}
     </div>
+    </>
   );
 }
 
